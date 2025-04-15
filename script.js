@@ -1,3 +1,4 @@
+// Smooth scrolling for navigation links
 document.querySelectorAll('.nav-links a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -110,3 +111,26 @@ revealItems(document.querySelectorAll('.tokenomics-item'), 'visible');
 revealItems(document.querySelectorAll('.activity'), 'visible');
 revealItems(document.querySelectorAll('.roadmap-item'), 'visible');
 animateSoundEffects();
+
+// Contract Address (CA) handling
+const caContainer = document.querySelector('.ca-container');
+if (caContainer) {
+  const caText = caContainer.querySelector('.ca-text');
+  // For now, CA is "Soon," so no copy functionality
+  if (caText.textContent.trim() !== 'Soon') {
+    caContainer.style.cursor = 'pointer';
+    caContainer.addEventListener('click', () => {
+      navigator.clipboard.write(caText.textContent.trim()).then(() => {
+        const originalText = caText.textContent;
+        caText.textContent = 'Copied!';
+        caText.style.color = '#ff69b4';
+        setTimeout(() => {
+          caText.textContent = originalText;
+          caText.style.color = '#000';
+        }, 1000);
+      }).catch(err => {
+        console.error('Failed to copy CA:', err);
+      });
+    });
+  }
+}

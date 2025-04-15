@@ -911,6 +911,7 @@ section.visible {
 /* Grab Tara Section */
 .grab-tara .panel-content {
   text-align: center;
+  padding: 2rem;
 }
 
 .grab-tara-bubble {
@@ -978,6 +979,47 @@ footer i {
 /* Highlight Animation for Panels */
 section.highlight {
   animation: highlight 0.6s ease-in-out;
+}
+
+
+
+css
+
+/* Contract Address Container */
+.ca-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  padding: 0.8rem 1.5rem;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 12px;
+  max-width: 300px;
+  box-shadow: 5px 5px 0 #ff69b4;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Contract Address Text */
+.ca-text {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+/* Disabled state for 'Soon' */
+.ca-container:disabled,
+.ca-container:has(.ca-text:where(:not(:hover))) {
+  cursor: default;
+  opacity: 0.7;
+}
+
+/* Hover effect (disabled when CA is 'Soon') */
+.ca-container:not(:disabled):hover {
+  transform: translateY(-3px);
+  box-shadow: 8px 8px 0 #ff69b4;
 }
 
 @keyframes highlight {
@@ -1248,6 +1290,17 @@ section.highlight {
       display: inline-block;
   }
 
+  .ca-container {
+    padding: 0.6rem 1rem;
+    margin: 0.8rem auto;
+    max-width: 250px;
+  }
+
+  .ca-text {
+    font-size: 1rem;
+  }
+
+
   .sound-effect {
       font-size: 1.2rem;
   }
@@ -1290,7 +1343,14 @@ section.highlight {
   .moon-text {
       font-size: 0.9rem;
   }
+  .ca-container {
+    padding: 0.5rem 0.8rem;
+    max-width: 200px;
+  }
 
+  .ca-text {
+    font-size: 0.9rem;
+  }
   .why-tara-bubble,
   .story-bubble,
   .tokenomics-bubble,
