@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Patrick Hand SC', 'Bubblegum Sans', 'Chalkboard', 'Doodle', cursive;
-  font-weight: 400;
+  font-family: 'Bubblegum Sans', 'Patrick Hand SC', 'Chalkboard', 'Doodle', cursive;
+  font-weight: 700; /* Already bold globally */
 }
 
 body {
@@ -13,7 +13,6 @@ body {
   position: relative;
 }
 
-/* Background Gradient Overlay */
 body::before {
   content: '';
   position: fixed;
@@ -39,7 +38,6 @@ body::after {
   z-index: -1;
 }
 
-/* Particles (Sparkles) */
 .particles {
   position: fixed;
   top: 0;
@@ -81,7 +79,6 @@ body::after {
   }
 }
 
-/* Manga Page Container */
 .manga-page {
   max-width: 100%;
   background: url('https://www.transparenttextures.com/patterns/paper.png') repeat;
@@ -92,7 +89,6 @@ body::after {
   align-items: center;
 }
 
-/* Navigation */
 header {
   position: sticky;
   top: 0;
@@ -115,11 +111,12 @@ header {
 .nav-links a {
   color: #000;
   text-decoration: none;
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.6rem; /* Slightly larger for nav links */
+  font-weight: 800;
   position: relative;
   transition: color 0.3s ease, transform 0.3s ease;
   letter-spacing: 0.05em;
+  text-shadow: 1px 1px 1px #ff69b4;
 }
 
 .nav-links a::after {
@@ -150,6 +147,8 @@ header {
   cursor: pointer;
   color: #000;
   transition: color 0.3s ease, transform 0.3s ease;
+  font-weight: 800;
+  text-shadow: 1px 1px 1px #ff69b4;
 }
 
 .hamburger:hover {
@@ -157,7 +156,6 @@ header {
   transform: rotate(90deg);
 }
 
-/* Manga Panels */
 section {
   margin-bottom: 2rem;
   border: 4px solid #000;
@@ -179,7 +177,6 @@ section.visible {
   transform: translateY(0);
 }
 
-/* Speed Lines Effect */
 .speed-lines {
   position: absolute;
   top: 0;
@@ -197,7 +194,6 @@ section.visible {
   z-index: -1;
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   justify-content: center;
@@ -250,13 +246,13 @@ section.visible {
   padding: 1.5rem;
   margin: 1rem 0;
   max-width: 550px;
-  font-size: 1.6rem;
+  font-size: 2.2rem; /* Larger for Japanese cute style */
   color: #000;
   z-index: 3;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px #ff69b4;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 5px 5px 0 #ff69b4;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.05em;
 }
 
@@ -285,24 +281,22 @@ section.visible {
 .moon-text {
   margin: 0 auto 1.5rem;
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: 2.4rem; /* Larger for Japanese cute style */
   color: #ff69b4;
   text-align: center;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  font-weight: 600;
+  text-shadow: 1px 1px 1px #ffb6c1;
+  font-weight: 800;
 }
 
-/* Sound Effects */
 .sound-effect {
-  font-family: 'Patrick Hand SC', 'Bubblegum Sans', 'Chalkboard', 'Doodle', cursive;
-  font-size: 2rem;
+  font-size: 2.5rem; /* Larger for Japanese cute style */
   color: #ff69b4;
   position: absolute;
   transform: rotate(-15deg);
-  text-shadow: 3px 3px #000;
+  text-shadow: 1px 1px 1px #ffb6c1;
   z-index: 2;
   transition: transform 0.4s ease, color 0.4s ease;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .sound-effect:hover {
@@ -340,7 +334,6 @@ section.visible {
   left: 10%;
 }
 
-/* Action Button */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -348,8 +341,8 @@ section.visible {
   background: linear-gradient(45deg, #ff69b4, #ffb6c1);
   color: #fff;
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.8rem; /* Slightly larger for buttons */
+  font-weight: 800;
   border: 3px solid #000;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
@@ -358,12 +351,14 @@ section.visible {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .btn i {
   margin-left: 0.8rem;
   color: #fff;
   transition: transform 0.3s ease;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .btn:hover {
@@ -376,7 +371,6 @@ section.visible {
   transform: scale(1.2);
 }
 
-/* Panel Caption */
 .panel-caption {
   position: absolute;
   bottom: 0;
@@ -391,16 +385,16 @@ section.visible {
 }
 
 .panel-caption h2 {
-  font-size: 2rem;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  font-weight: 600;
+  font-size: 2.8rem; /* Larger for Japanese cute style */
+  text-shadow: 1px 1px 1px #ff69b4;
+  font-weight: 800;
 }
 
 .panel-caption h2 i {
   color: #ff69b4;
+  text-shadow: 1px 1px 1px #ffb6c1;
 }
 
-/* Why Tara Section */
 .why-tara .panel-content {
   text-align: center;
 }
@@ -413,13 +407,13 @@ section.visible {
   padding: 1.5rem;
   margin: 1.5rem auto;
   max-width: 800px;
-  font-size: 1.6rem;
+  font-size: 2.2rem; /* Larger for Japanese cute style */
   color: #000;
   z-index: 3;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px #ff69b4;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 5px 5px 0 #ff69b4;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.05em;
 }
 
@@ -464,14 +458,19 @@ section.visible {
 }
 
 .detail-card h3 {
-  font-size: 1.5rem;
+  font-size: 2rem; /* Larger for Japanese cute style */
   color: #ff69b4;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.05em;
+  text-shadow: 1px 1px 1px #ffb6c1;
+}
+
+.detail-card h3 i {
+  text-shadow: 1px 1px 1px #ffb6c1;
 }
 
 .detail-card p {
@@ -479,6 +478,8 @@ section.visible {
   color: #000;
   line-height: 1.6;
   letter-spacing: 0.05em;
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px 0.5px #ff69b4;
 }
 
 .detail-card:hover {
@@ -501,7 +502,6 @@ section.visible {
   50% { transform: translateX(-20px); }
 }
 
-/* Story Section */
 .story .panel-content {
   text-align: center;
 }
@@ -514,13 +514,13 @@ section.visible {
   padding: 1.5rem;
   margin: 1.5rem auto;
   max-width: 800px;
-  font-size: 1.6rem;
+  font-size: 2.2rem; /* Larger for Japanese cute style */
   color: #000;
   z-index: 3;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px #ff69b4;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 5px 5px 0 #ff69b4;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.05em;
 }
 
@@ -561,6 +561,8 @@ section.visible {
   line-height: 1.7;
   margin-bottom: 15px;
   letter-spacing: 0.05em;
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px 0.5px #ff69b4;
 }
 
 .story-images {
@@ -594,6 +596,8 @@ section.visible {
   color: #000;
   margin-top: 10px;
   letter-spacing: 0.05em;
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px 0.5px #ff69b4;
 }
 
 .story-image:hover {
@@ -601,7 +605,6 @@ section.visible {
   box-shadow: 8px 8px 0 #ff69b4;
 }
 
-/* Tokenomics Section */
 .tokenomics .panel-content {
   text-align: center;
 }
@@ -614,13 +617,13 @@ section.visible {
   padding: 1.5rem;
   margin: 1.5rem auto;
   max-width: 800px;
-  font-size: 1.6rem;
+  font-size: 2.2rem; /* Larger for Japanese cute style */
   color: #000;
   z-index: 3;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px #ff69b4;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 5px 5px 0 #ff69b4;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.05em;
 }
 
@@ -659,17 +662,20 @@ section.visible {
 }
 
 .tokenomics-item h3 {
-  font-size: 1.5rem;
+  font-size: 2rem; /* Larger for Japanese cute style */
   color: #ff69b4;
   margin-bottom: 10px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.05em;
+  text-shadow: 1px 1px 1px #ffb6c1;
 }
 
 .tokenomics-item p {
   font-size: 1.2rem;
   color: #000;
   letter-spacing: 0.05em;
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px 0.5px #ff69b4;
 }
 
 .tokenomics-item:hover {
@@ -677,7 +683,6 @@ section.visible {
   box-shadow: 8px 8px 0 #ff69b4;
 }
 
-/* Roadmap Section */
 .roadmap .panel-content {
   text-align: center;
   position: relative;
@@ -692,13 +697,13 @@ section.visible {
   padding: 1.5rem;
   margin: 1.5rem auto;
   max-width: 800px;
-  font-size: 1.6rem;
+  font-size: 2.2rem; /* Larger for Japanese cute style */
   color: #000;
   z-index: 3;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px #ff69b4;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 5px 5px 0 #ff69b4;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.05em;
 }
 
@@ -729,7 +734,6 @@ section.visible {
   gap: 4rem;
 }
 
-/* Roadmap Path */
 .roadmap-content::before {
   content: '';
   position: absolute;
@@ -762,7 +766,6 @@ section.visible {
   z-index: 2;
 }
 
-/* Alternate sides for roadmap items */
 .roadmap-item:nth-child(odd) {
   margin-left: auto;
   margin-right: 2rem;
@@ -773,7 +776,6 @@ section.visible {
   margin-left: 2rem;
 }
 
-/* Milestone Marker */
 .roadmap-item::before {
   content: '🐾';
   position: absolute;
@@ -800,14 +802,19 @@ section.visible {
 }
 
 .roadmap-item h3 {
-  font-size: 1.5rem;
+  font-size: 2rem; /* Larger for Japanese cute style */
   color: #ff69b4;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.05em;
+  text-shadow: 1px 1px 1px #ffb6c1;
+}
+
+.roadmap-item h3 i {
+  text-shadow: 1px 1px 1px #ffb6c1;
 }
 
 .roadmap-item p {
@@ -815,6 +822,8 @@ section.visible {
   color: #000;
   line-height: 1.6;
   letter-spacing: 0.05em;
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px 0.5px #ff69b4;
 }
 
 .roadmap-item:hover {
@@ -822,7 +831,6 @@ section.visible {
   box-shadow: 8px 8px 0 #ff69b4;
 }
 
-/* Community Section */
 .community .panel-content {
   text-align: center;
 }
@@ -835,13 +843,13 @@ section.visible {
   padding: 1.5rem;
   margin: 1.5rem auto;
   max-width: 800px;
-  font-size: 1.6rem;
+  font-size: 2.2rem; /* Larger for Japanese cute style */
   color: #000;
   z-index: 3;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px #ff69b4;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 5px 5px 0 #ff69b4;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.05em;
 }
 
@@ -887,20 +895,27 @@ section.visible {
 }
 
 .activity h3 {
-  font-size: 1.5rem;
+  font-size: 2rem; /* Larger for Japanese cute style */
   color: #ff69b4;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.05em;
+  text-shadow: 1px 1px 1px #ffb6c1;
+}
+
+.activity h3 i {
+  text-shadow: 1px 1px 1px #ffb6c1;
 }
 
 .activity p {
   font-size: 1.2rem;
   color: #000;
   letter-spacing: 0.05em;
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px 0.5px #ff69b4;
 }
 
 .activity:hover {
@@ -908,7 +923,6 @@ section.visible {
   box-shadow: 8px 8px 0 #ff69b4;
 }
 
-/* Grab Tara Section */
 .grab-tara .panel-content {
   text-align: center;
   padding: 2rem;
@@ -922,13 +936,13 @@ section.visible {
   padding: 1.5rem;
   margin: 1.5rem auto;
   max-width: 800px;
-  font-size: 1.6rem;
+  font-size: 2.2rem; /* Larger for Japanese cute style */
   color: #000;
   z-index: 3;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 1px #ff69b4;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   box-shadow: 5px 5px 0 #ff69b4;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.05em;
 }
 
@@ -956,9 +970,10 @@ section.visible {
   margin: 0 auto 20px;
   line-height: 1.7;
   letter-spacing: 0.05em;
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px 0.5px #ff69b4;
 }
 
-/* Footer */
 footer {
   padding: 1.5rem;
   text-align: center;
@@ -970,22 +985,19 @@ footer {
 footer p {
   font-size: 1rem;
   letter-spacing: 0.05em;
+  font-weight: 700;
+  text-shadow: 0.5px 0.5px 0.5px #ff69b4;
 }
 
 footer i {
   color: #ff69b4;
+  text-shadow: 0.5px 0.5px 0.5px #ffb6c1;
 }
 
-/* Highlight Animation for Panels */
 section.highlight {
   animation: highlight 0.6s ease-in-out;
 }
 
-
-
-css
-
-/* Contract Address Container */
 .ca-container {
   display: flex;
   justify-content: center;
@@ -1000,23 +1012,21 @@ css
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Contract Address Text */
 .ca-text {
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* Slightly larger for CA text */
   color: #000;
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 0.05em;
   text-align: center;
+  text-shadow: 0.5px 0.5px 0.5px #ff69b4;
 }
 
-/* Disabled state for 'Soon' */
 .ca-container:disabled,
 .ca-container:has(.ca-text:where(:not(:hover))) {
   cursor: default;
   opacity: 0.7;
 }
 
-/* Hover effect (disabled when CA is 'Soon') */
 .ca-container:not(:disabled):hover {
   transform: translateY(-3px);
   box-shadow: 8px 8px 0 #ff69b4;
@@ -1028,7 +1038,6 @@ css
   100% { transform: scale(1); }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   header {
       flex-wrap: wrap;
@@ -1054,7 +1063,7 @@ css
   }
 
   .nav-links a {
-      font-size: 1.2rem;
+      font-size: 1.4rem; /* Adjusted for smaller screens */
       padding: 0.6rem;
       text-align: center;
   }
@@ -1089,7 +1098,7 @@ css
   }
 
   .hero-bubble {
-      font-size: 1.1rem;
+      font-size: 1.6rem; /* Adjusted for smaller screens */
       padding: 0.8rem;
       margin: 0.6rem 0;
       max-width: 90%;
@@ -1110,7 +1119,7 @@ css
   }
 
   .moon-text {
-      font-size: 1.1rem;
+      font-size: 1.8rem; /* Adjusted for smaller screens */
       margin: 1rem auto;
   }
 
@@ -1120,7 +1129,7 @@ css
   .community-bubble,
   .grab-tara-bubble,
   .roadmap-bubble {
-      font-size: 1.1rem;
+      font-size: 1.6rem; /* Adjusted for smaller screens */
       padding: 0.8rem;
       margin: 0.6rem auto;
       max-width: 90%;
@@ -1150,7 +1159,7 @@ css
   }
 
   .detail-card h3 {
-      font-size: 1.2rem;
+      font-size: 1.5rem; /* Adjusted for smaller screens */
   }
 
   .detail-card p {
@@ -1201,7 +1210,7 @@ css
   }
 
   .tokenomics-item h3 {
-      font-size: 1.2rem;
+      font-size: 1.5rem; /* Adjusted for smaller screens */
   }
 
   .tokenomics-item p {
@@ -1234,7 +1243,7 @@ css
   }
 
   .roadmap-item h3 {
-      font-size: 1.2rem;
+      font-size: 1.5rem; /* Adjusted for smaller screens */
   }
 
   .roadmap-item p {
@@ -1258,7 +1267,7 @@ css
   }
 
   .activity h3 {
-      font-size: 1.2rem;
+      font-size: 1.5rem; /* Adjusted for smaller screens */
   }
 
   .activity p {
@@ -1271,7 +1280,7 @@ css
   }
 
   .btn {
-      font-size: 1.1rem;
+      font-size: 1.3rem; /* Adjusted for smaller screens */
       padding: 0.7rem 1.2rem;
       margin: 0.8rem auto;
       display: block;
@@ -1283,7 +1292,7 @@ css
   }
 
   .panel-caption h2 {
-      font-size: 1.3rem;
+      font-size: 2rem; /* Adjusted for smaller screens */
       padding: 0.4rem 0.8rem;
       background: rgba(0, 0, 0, 0.9);
       border-radius: 6px;
@@ -1297,12 +1306,11 @@ css
   }
 
   .ca-text {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Adjusted for smaller screens */
   }
 
-
   .sound-effect {
-      font-size: 1.2rem;
+      font-size: 1.8rem; /* Adjusted for smaller screens */
   }
 
   .wink { bottom: 8%; left: 8%; }
@@ -1326,7 +1334,7 @@ css
   }
 
   .hero-bubble {
-      font-size: 0.9rem;
+      font-size: 1.2rem; /* Adjusted for smaller screens */
       padding: 0.6rem;
       margin: 0.4rem 0;
   }
@@ -1341,7 +1349,7 @@ css
   }
 
   .moon-text {
-      font-size: 0.9rem;
+      font-size: 1.4rem; /* Adjusted for smaller screens */
   }
   .ca-container {
     padding: 0.5rem 0.8rem;
@@ -1349,7 +1357,7 @@ css
   }
 
   .ca-text {
-    font-size: 0.9rem;
+    font-size: 1rem; /* Adjusted for smaller screens */
   }
   .why-tara-bubble,
   .story-bubble,
@@ -1357,7 +1365,7 @@ css
   .community-bubble,
   .grab-tara-bubble,
   .roadmap-bubble {
-      font-size: 0.9rem;
+      font-size: 1.2rem; /* Adjusted for smaller screens */
       padding: 0.6rem;
       margin: 0.4rem auto;
   }
@@ -1373,12 +1381,12 @@ css
   }
 
   .panel-caption h2 {
-      font-size: 1rem;
+      font-size: 1.5rem; /* Adjusted for smaller screens */
       padding: 0.3rem 0.6rem;
   }
 
   .btn {
-      font-size: 0.9rem;
+      font-size: 1rem; /* Adjusted for smaller screens */
       padding: 0.6rem 1rem;
   }
 
@@ -1386,7 +1394,7 @@ css
   .tokenomics-item h3,
   .activity h3,
   .roadmap-item h3 {
-      font-size: 1rem;
+      font-size: 1.2rem; /* Adjusted for smaller screens */
   }
 
   .detail-card p,
@@ -1407,7 +1415,7 @@ css
   }
 
   .sound-effect {
-      font-size: 1rem;
+      font-size: 1.4rem; /* Adjusted for smaller screens */
   }
 
   footer p {
